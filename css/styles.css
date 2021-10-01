@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+#contenedor{
+	display: grid;
+	min-height: 100vh;
+	grid-template-areas:
+	"header header header"
+	"informacion informacion informacion"
+	"estadisticas estadisticas estadisticas"
+	"footer footer footer";
+	background: rgb(0,0,0);
+	grid-template-columns: 4fr 4fr 4fr;
+	grid-auto-rows: repeat(4, 1fr);
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+	justify-items: stretch;
+}
+#header{
+	grid-area: header;
+	background: linear-gradient(90deg, rgba(38,38,45,1) 0%, rgba(0,0,4,1) 70%);
+	justify-self: stretch;
+	height: 100px;
+	padding: 20px;
+	font-weight: 500;
+	border-bottom: 2px	solid #000;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+#header .logo{
+	display: block;
+	width: 250px;
+	font-size: 40px;
+	padding-left: 10px;
+}
+#header	.logo a{
+	text-decoration: none;
+	color: #FFF;
+	font-weight: bold;	
+}
+#header	.logo a:hover{
+	font-size: 45px;
+	text-decoration: none;
+	color: steelblue;
+	font-weight: bold;	
+	transform: scale(1.0);
+}
+#header .navegacion{
+	text-align: right !important;
+	justify-content: space-between !important;
+	margin: 12px;
+}
+#header .navegacion li{
+	font-size: 20px;
+	color: black;
+	display: inline-block;
+	padding: 0 40px;
+}
+#header ul{
+	list-style: none;
+}
+#header .navegacion a{
+	text-decoration: none;
+	font-size: 25px;
+	font-weight: 600;
+	color: white;
+}
+#header .navegacion a:hover{
+	text-decoration: none;
+	color: goldenrod;
+	font-weight: bold;
+	transform: scale(1.1);
+}
+h1{
+	color: black;
+	font-weight: 700;
+	margin: 10px;
+	padding: 0 25px;
+	text-align: center;
+}
+#informacion{
+	grid-area: informacion;
+	background: linear-gradient(90deg, rgba(141,141,244,1) 0%, rgba(21,21,209,1) 100%);
+	min-height: 100px;
+	padding-top: 5px;
+}
+#informacion .content{
+	font-weight: 500;
+	font-size: 20px;
+	justify-content: start;
+	padding: 40px;
+	box-sizing: border-box;
+	margin: 2px;
+}
+.content{
+	color: whitesmoke;
+}
+.descriptionFoto{
+	text-align: center !important;	
+}
+#estadisticas{
+	grid-area: estadisticas;
+	background: linear-gradient(90deg, rgba(183,183,205,1) 0%, rgba(207,207,230,1) 100%);
+}
+#estadisticas p{
+	font-size: 30px;
+	font-weight: 500;
+	text-align: left;
+}
+#contenedorClubes{
+	display: grid;
+	min-height: 100vh;
+	grid-template-areas:
+	"header header header"
+	"clubes clubes clubes"
+	"informacionNewells informacionNewells informacionNewells"
+	"informacionBarcelona informacionBarcelona informacionBarcelona"
+	"informacionPsg informacionPsg informacionPsg"
+	"informacionSeleccion informacionSeleccion informacionSeleccion"
+	"footer footer footer";
+	background: rgb(0,0,0);
+	grid-template-columns: 4fr 4fr 4fr;
+	grid-auto-rows: repeat(5, 1fr);
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+	justify-items: stretch;
+}
+#clubes{
+	grid-area: clubes;
+	background-color: #FFF;
+	min-height: 100px;
+	padding-top: 5px;
+}
+#clubes h1{
+	color: darkblue;
+	font-weight: 800;
+	margin: 10px;	
+	padding: 0 10px;
+	text-align: center;
+}
+.clubesText{/*
+	font-size: 40px;
+	color: darkblue;
+	font-weight: 800;
+	margin: 10px;	
+	padding: 0 10px;
+	text-align: center;*/
+}
+.textEquipo{
+	font-size: 40px;
+	font-weight: bold;
+}
+#informacionNewells{
+	grid-area: informacionNewells;
+	background: linear-gradient(90deg, rgba(119,3,11,1) 0%, rgba(229,38,38,1) 35%, rgba(208,90,100,1) 100%);
+	min-height: 100px;
+	padding-top: 2px;
+}
+#informacionBarcelona{
+	grid-area: informacionBarcelona;
+	background: linear-gradient(90deg, rgba(168,26,26,1) 0%, rgba(38,97,229,1) 100%);
+	min-height: 100px;
+	padding-top: 2px;
+}
+#informacionPsg{
+	grid-area: informacionPsg;
+	background: linear-gradient(90deg, rgba(212,215,241,1) 0%, rgba(42,42,122,1) 49%, rgba(155,44,44,1) 100%);
+	min-height: 100px;
+	padding-top: 2px;
+}
+#informacionSeleccion{
+	grid-area: informacionSeleccion;
+	background: linear-gradient(90deg, rgba(35,211,240,1) 0%, rgba(237,237,238,1) 50%, rgba(35,211,240,1) 100%);
+	min-height: 100px;
+	padding-top: 2px;
+}
+#informacionNewells .contentNewells{
+	font-weight: 500;
+	font-size: 20px;
+	justify-content: start;
+	padding: 25px;
+	box-sizing: border-box;
+	margin: 2px;
+}
+#informacionBarcelona .contentBarcelona{
+	font-weight: 500;
+	font-size: 20px;
+	justify-content: start;
+	padding: 25px;
+	box-sizing: border-box;
+	margin: 2px;
+}
+#informacionPsg .contentPsg{
+	font-weight: 500;
+	font-size: 20px;
+	justify-content: start;
+	padding: 25px;
+	box-sizing: border-box;
+	margin: 2px;
+}
+#informacionSeleccion .contentSeleccion{
+	font-weight: 500;
+	font-size: 20px;
+	justify-content: start;
+	padding: 25px;
+	box-sizing: border-box;
+	margin: 2px;
+}
+#contenedorTitulos{
+	display: grid;
+	min-height: 100vh;
+	grid-template-areas:
+	"header header header"
+	"estadisticas estadisticas estadisticas"
+	"footer footer footer";
+	background: linear-gradient(90deg, rgba(142,142,187,1) 0%, rgba(183,183,205,1) 39%, rgba(207,207,230,1) 100%);
+	grid-template-columns: 4fr 4fr 4fr;
+	grid-auto-rows: repeat(5, 1fr);
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+	justify-items: stretch;
+}
+#titulos{
+	grid-area: estadisticas;
+	background: linear-gradient(90deg, rgba(142,142,187,1) 0%, rgba(183,183,205,1) 39%, rgba(207,207,230,1) 100%);
+	min-height: 800px;
+	height: 130vh;
+}
+#titulos h1{
+	font-weight: 800;
+	color: darkblue;
+	text-align: left;
+	margin: 5px;
+	padding: 0 20px;
+	text-align: center;
+}
+.palmaresProf{/*
+	font-size: 40px;
+	font-weight: 800;
+	color: darkblue;
+	text-align: left;
+	margin: 5px;
+	padding: 0 20px;*/	
+}
+.totalTitulos{/*
+	font-size: 40px;
+	color: darkblue;
+	font-weight: 800;
+	text-align: center;
+	margin: 5px;
+	padding: 0 20px;*/
+}
+table{
+	margin: 20px;
+	border: 5px solid;
+	color: darkblue;
+	font-size: 20px;
+	text-align: center;
+}
+th{
+	color: #000;
+	border: 3px	solid;
+	font-weight: bold;
+	text-align: center;
+}
+td {
+	color: #000;
+	border: 1px solid;
+	font-size: 35px;
+	font-weight: 600;
+	text-align: center;
+}
+tr {
+	color: #000;
+	border: 1px solid;
+}
+#footer{
+	grid-area: footer;
+	background: linear-gradient(90deg, rgba(38,38,45,1) 0%, rgba(0,0,4,1) 70%);
+	font-size: 1rem;
+	color: white;
+	font-weight: 500;
+	min-height: 250px;
+	height: 40vh;
+	padding-left: 20px;
+}
+#footer p{
+	margin: 15px;
+} 
+#footer li a:hover{
+	font-size: 25px;
+	text-decoration: none;
+	color: goldenrod !important; 
+	font-weight: bold;
+	transform: scale(1.1);
+}
+#footer ul li{
+	display: inline-block;
+	text-decoration: none;
+	padding: 5px;
+	list-style: none;
+	margin: 10px;
+}
+.title{
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+}
+#contenedorGaleria{
+	display: grid;
+	min-height: 100vh;
+	grid-template-areas:
+	"header header header"
+	"fotos fotos fotos"
+	"footer footer footer";
+	grid-template-columns: 4fr 4fr 4fr;
+	grid-auto-rows: repeat(4, 1fr);
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+	justify-items: stretch;
+}
+#galeria{
+	grid-area: fotos;
+	background-color: #FFF;
+	display: inline-block;
+	text-align: center;
+}
+#galeria h1{
+	font-weight: 800;
+	color: darkblue;
+	text-align: center;
+	margin: 20px;
+	padding: 0 25px;
+}
+#galeria .fotos img{
+	display: inline-block;
+	width: 25%;
+	margin-bottom: 20px;
+	margin: 10px;
+}
+#contenedorContacto{
+	display: grid;
+	min-height: 100vh;
+	grid-template-areas:
+	"header header header"
+	"contacto contacto contacto"
+	"footer footer footer";
+	grid-template-columns: 4fr 4fr 4fr;
+	grid-auto-rows: repeat(4, 1fr);
+	justify-items: stretch;
+}
+#contacto{
+	grid-area: contacto;
+	background-color: white;
+	min-height: 40vh;
+}
+#contacto ul li{
+	text-align: center;
+}
+.textContacto{
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	margin: 20px;
+}
+#contacto ul li a{
+	font-size: 50px;
+	font-weight: 700;
+	text-align: left;
+	text-decoration: none;
+	margin: 20px;
+	color: blue;
+}
+#contacto ul li a:hover{
+	font-size: 60px;
+	text-decoration: none;
+	text-decoration: none;
+	color: black; !important; 
+	font-weight: bold;
+	transform: scale(1.1)
+}	
+#contenedorFormulario{
+	display: grid;
+	min-height: 100vh;
+	grid-template-areas:
+	"header header header"
+	"formulario formulario formulario"
+	"footer footer footer";
+	background: linear-gradient(90deg, rgba(86,96,170,1) 0%, rgba(177,168,252,1) 100%);
+	grid-template-columns: 4fr 4fr 4fr;
+	grid-auto-rows: repeat(4, 1fr);
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+	justify-items: stretch;
+}
+#formulario{
+	display: inline-block;
+	grid-area: formulario;
+	background: linear-gradient(90deg, rgba(86,96,170,1) 0%, rgba(177,168,252,1) 100%);
+}
+#formulario form{
+	font-size: 25px;
+	margin: 15px;
+	margin-top: 20px;
+}
+#formulario input{
+	font-size: 15px;
+	margin: 15px;
+	margin-top: 20px;
+}
+.input:focus{
+	outline: none;
+	background: linear-gradient(90deg, rgba(192,182,113,1) 0%, rgba(205,181,20,1) 46%, rgba(232,167,76,1) 100%);
+}
+#contenedorRecibe{
+	display: grid;
+	min-height: 100vh;
+	grid-template-areas:
+	"header header header"
+	"recibe recibe recibe"
+	"footer footer footer";
+	background: linear-gradient(90deg, rgba(86,96,170,1) 0%, rgba(177,168,252,1) 100%);
+	grid-template-columns: 4fr 4fr 4fr;
+	grid-auto-rows: repeat(4, 1fr);
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+	justify-items: stretch;
+}		
+#recibe{
+	grid-area: recibe;
+	display: flex;
+	min-height: 35vh;
+}
+#recibe a{
+	font-size: 40px;
+	font-weight: 800;
+	text-decoration: none;
+	color: black;
+	margin: 20px;
+	padding: 10px;
+}
+#recibe a:hover{
+	font-size: 60px;
+	text-decoration: none;
+	color: blue; !important; 
+	font-weight: bold;
+	transform: scale(1.1)
+}
